@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+10.times do
+  Person.create(
+    name: Faker::Cat.name,
+    age: Faker::Number.number(2),
+    hair_color: Faker::Color.color_name,
+    eye_color: Faker::Color.color_name,
+    gender: [' ', 'female', 'male', 'other'].sample,
+    alive: [' ', 'yes', 'no'].sample
+  )
+end
+puts "seeded"
